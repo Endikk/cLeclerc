@@ -1,0 +1,23 @@
+{
+  "name": "cLeclerc",
+  "version": "1.0",
+  "description": "Remplace toutes les images sur les sites web par des photos de Charles Leclerc",
+  "manifest_version": 3,
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["jquery-3.6.0.min.js", "ncage.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["ncage.js"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+}

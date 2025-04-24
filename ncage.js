@@ -1,37 +1,31 @@
 (function() {
-	//nCage 
+	//cLeclerc 
 	var main = function($) { 
 		
-		var self = $.nCage = new function(){};
+		var self = $.cLeclerc = new function(){};
 		
 		$.extend(self, {
-			nCageImgs : [
-			'http://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Nicolas_Cage_2011_CC.jpg/220px-Nicolas_Cage_2011_CC.jpg',
-			'http://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Nicolas_Cage_-_66%C3%A8me_Festival_de_Venise_(Mostra).jpg/220px-Nicolas_Cage_-_66%C3%A8me_Festival_de_Venise_(Mostra).jpg',
-			'http://content8.flixster.com/rtactor/40/33/40334_pro.jpg',
-			'http://images.fandango.com/r88.0/ImageRenderer/200/295/images/performer_no_image_large.jpg/0/images/masterrepository/performer%20images/p10155/kickass-pm-4.jpg',
-			'http://topnews.in/files/Nicolas-Cage_0.jpg',
-			'http://i0.kym-cdn.com/entries/icons/original/000/006/993/1817.jpg',
-			'http://images.trulia.com/blogimg/9/d/7/d/1775659_1302741896636_o.jpg',
-			'http://cache2.artprintimages.com/LRG/10/1062/Y4UL000Z.jpg',
-			'http://fitnessgurunyc.com/wp/wp-content/uploads/2011/03/5c4fc_nicolas_cage_01.jpeg',
-			'http://www3.pictures.fp.zimbio.com/Nicholas+Cage+David+Letterman+-EtX2RCI91al.jpg',
-			'http://www.topnewmovieslist.com/wp-content/uploads/2012/05/Nicolas-Cage-Movies.jpg',
-			'http://resources2.news.com.au/images/2009/11/04/1225794/400950-nicolas-cage.jpg',
-			'http://www.topnews.in/uploads/Nicolas-Cage1.jpg',
-			'http://d2tq98mqfjyz2l.cloudfront.net/image_cache/1335739369248357_animate.gif',
-			'http://thetrustadvisor.com/wp-content/uploads/2013/03/nicolas-cage.jpg',
-			'http://starsmedia.ign.com/stars/image/article/908/908074/nicolas-cage-20080905025038648-000.jpg',
-			'http://images.latinospost.com/data/images/full/10956/nicolas-cage.jpg?w=600',
-			'http://wpc.556e.edgecastcdn.net/80556E/img.news/NEPYPT3WQzBeUP_1_1.jpg',
-			'http://www.iwatchstuff.com/2012/11/30/nic-cage-in-things.jpg',
-			'http://images.contactmusic.com/newsimages/nicolas_cage_552048.jpg',
-			'http://www.apnatimepass.com/nicolas-cage-in-stolen-movie-10.jpg',
-			'http://24.media.tumblr.com/e68455822f14c29d43bacbc19f15ed36/tumblr_mr1kquuOvD1rimb2bo1_400.jpg',
-			'http://doubleaardvarkmedia.com/wp-content/uploads/2013/07/nicolas_cage_1193538-450-x-450.jpg',
-			'http://static2.businessinsider.com/image/4adcd99800000000009ed0dd/how-nicolas-cage-spent-his-way-to-the-poorhouse.jpg',
-			'http://www1.pictures.zimbio.com/pc/Nicolas+Cage+Nicolas+Cage+Emma+Stone+Croods+AbN87pQpWsjl.jpg',
-			'http://signaltower.co/wp-content/uploads/2013/03/crazy-nicholas-cage-placeholder-image.jpg',
+			cLeclercImgs : [
+			'https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Charles_Leclerc_2022_S%C3%A3o_Paulo_Grand_Prix_%2852498120773%29_%28cropped%29.jpg/220px-Charles_Leclerc_2022_S%C3%A3o_Paulo_Grand_Prix_%2852498120773%29_%28cropped%29.jpg',
+			'https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Charles_Leclerc_2019_%28cropped%29.jpg/220px-Charles_Leclerc_2019_%28cropped%29.jpg',
+			'https://cdn-1.motorsport.com/images/amp/Y99JQRbY/s6/charles-leclerc-ferrari-1.jpg',
+			'https://cdn-1.motorsport.com/images/mgl/YMdyVRx0/s8/charles-leclerc-ferrari-on-the-1.jpg',
+			'https://www.formula1.com/content/dam/fom-website/drivers/C/CHALEC01_Charles_Leclerc/chalec01.png.transform/2col/image.png',
+			'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3Md9KpWOTJUkMHSlRE3UrqZwWYT-hCt7Wxw&usqp=CAU',
+			'https://e0.365dm.com/23/08/2048x1152/skysports-charles-leclerc-ferrari_6258190.jpg',
+			'https://hips.hearstapps.com/hmg-prod/images/charles-leclerc-of-monaco-driving-the-scuderia-ferrari-sf-23-news-photo-1683495330.jpg',
+			'https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/2019_Formula_One_tests_Barcelona%2C_Leclerc_%2847251966381%29.jpg/1200px-2019_Formula_One_tests_Barcelona%2C_Leclerc_%2847251966381%29.jpg',
+			'https://static.independent.co.uk/2022/09/11/17/GettyImages-1418851482.jpg',
+			'https://photo-assets.formula1.com/content/dam/fom-website/manual/Misc/2023manual/2023Races/AustralianGP/Saturday/GettyImages-1476538696.jpg',
+			'https://cdn-1.motorsport.com/images/mgl/2y3n5rn0/s8/charles-leclerc-ferrari-1.jpg',
+			'https://cdn-1.motorsport.com/images/amp/YMdwjmK0/s1000/charles-leclerc-ferrari-f1-75-.jpg',
+			'https://cdn-1.motorsport.com/images/mgl/Y99dN3XY/s8/charles-leclerc-ferrari-sf-23-.jpg',
+			'https://cdn-1.motorsport.com/images/amp/0L1nwAg2/s1000/charles-leclerc-ferrari-sf-23-.jpg',
+			'https://www.si.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:good%2Cw_1200/MTk4NDcxMDUzOTMwNDkyNzc1/leclerc-p.jpg',
+			'https://cdn-1.motorsport.com/images/amp/6VRWXKA0/s1000/charles-leclerc-ferrari-sf-23-.jpg',
+			'https://media.formula1.com/image/upload/f_auto/q_auto/v1683237779/fom-website/2023/Races/Miami%20Grand%20Prix/Thursday/FORMULA_1_MIAMI_GRAND_PRIX_PRESENTED_BY_CRYPTO.COM_Race.jpg',
+			'https://static.independent.co.uk/2023/05/30/15/Monaco-Grand-Prix-Auto-Ra-20.jpg',
+			'https://cdn-1.motorsport.com/images/amp/YXRrELm0/s1000/charles-leclerc-ferrari-sf-23-.jpg',
 			],
 			handleImages : function (lstImgs, time)
 			{
@@ -74,7 +68,7 @@
 
 		//Run on jQuery ready
 		$(function(){
-			self.handleImages(self.nCageImgs, 3000);
+			self.handleImages(self.cLeclercImgs, 3000);
 		});
 	};
 
@@ -103,5 +97,4 @@
 		main(jQuery);
 	}
  })();
- 
- 
+
