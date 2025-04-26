@@ -11,8 +11,13 @@
   ],
   "web_accessible_resources": [
     {
-      "resources": ["cleclerc.js"],
+      "resources": ["cleclerc.js", "images/all/*"],
       "matches": ["<all_urls>"]
     }
-  ]
+  ],
+  "icons": {
+    "16": "images/profil/charles1.png",
+    "48": "images/profil/charles2.png",
+    "128": "images/profil/charles3.png"
+  }
 }

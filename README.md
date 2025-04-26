@@ -25,6 +25,15 @@ Since this extension is not yet published on the Chrome Web Store, you can insta
 4. Click "Load unpacked" and select the directory containing the extension files
 5. The extension should now be installed and active
 
+## Image Setup
+
+1. Create a folder structure `images/all` in the extension directory
+2. Place your Charles Leclerc images in the `images/all` folder
+3. Create icon images for the extension and place them in the `images` folder:
+   - icon16.png (16x16 pixels)
+   - icon48.png (48x48 pixels)
+   - icon128.png (128x128 pixels)
+
 ## Usage
 
 - After installation, the extension will automatically replace images as you browse
