@@ -1,6 +1,6 @@
 {
   "name": "cLeclerc",
-  "version": "1.0",
+  "version": "1.0.1",
   "description": "Remplace toutes les images sur les sites web par des photos de Charles Leclerc",
   "manifest_version": 3,
   "content_scripts": [
