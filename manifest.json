@@ -11,7 +11,11 @@
   ],
   "web_accessible_resources": [
     {
-      "resources": ["cleclerc.js", "images/all/*"],
+      "resources": [
+        "cleclerc.js",
+        "images/all/*",
+        "images/profil/*"
+      ],
       "matches": ["<all_urls>"]
     }
   ],
