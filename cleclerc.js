@@ -19,27 +19,32 @@
                 // car nous ne pouvons pas scanner dynamiquement un répertoire
                 // Vous devez adapter cette liste avec vos propres noms de fichiers
                 const predefinedImages = [
+                    // images/all JPGs
                     'leclerc1.jpg',
                     'leclerc2.jpg',
                     'leclerc3.jpg',
                     'leclerc4.jpg',
                     'leclerc5.jpg',
-					'leclerc6.jpg',
-					'leclerc7.jpg',
-					'leclerc8.jpg',
-					'leclerc9.jpg',
-					'leclerc10.jpg',
-					'leclerc11.jpg',
-					'leclerc12.jpg',
-					'leclerc13.jpg',
-					'leclerc14.jpg',
-					'leclerc15.jpg',
-					'leclerc16.jpg',
-					'leclerc17.jpg',
-					'leclerc18.jpg',
-					'leclerc19.jpg',
-					'leclerc20.jpg',
-                    // Ajoutez tous les noms de fichiers que vous avez dans images/all
+                    'leclerc6.jpg',
+                    'leclerc7.jpg',
+                    'leclerc8.jpg',
+                    'leclerc9.jpg',
+                    'leclerc10.jpg',
+                    'leclerc11.jpg',
+                    'leclerc12.jpg',
+                    'leclerc13.jpg',
+                    'leclerc14.jpg',
+                    'leclerc15.jpg',
+                    'leclerc16.jpg',
+                    'leclerc17.jpg',
+                    'leclerc18.jpg',
+                    'leclerc19.jpg',
+                    'leclerc20.jpg',
+                    // images/profil PNGs
+                    'profil/charles1.png',
+                    'profil/charles2.png',
+                    'profil/charles3.png',
+                    // Ajoutez tous les noms de fichiers que vous avez dans images/all et images/profil
                 ];
                 
                 self.cLeclercImgs = createImageUrls(predefinedImages);
@@ -90,30 +95,7 @@
         });
     };
 
-    //Method to load jQuery
-    function loadJS(src, callback) {
-        var s = document.createElement('script');
-        s.src = src;
-        s.async = true;
-        s.onreadystatechange = s.onload = function() {
-            var state = s.readyState;
-            if (!callback.done && (!state || /loaded|complete/.test(state))) {
-                callback.done = true;
-                callback();
-            }
-        };
-        document.getElementsByTagName('head')[0].appendChild(s);
-    }
-    
-    //Add jQuery if not present, then run main
-    if(typeof jQuery == 'undefined') {
-        loadJS(('https:' == document.location.protocol ? 'https://' : 'http://') + 
-          'ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js', function(){
-          jQuery.noConflict();
-          main(jQuery);
-        });
-      }else {
-        main(jQuery);
-    }
+    // Utiliser uniquement la version locale de jQuery, déjà injectée par le manifest
+    main(jQuery);
 })();
 
