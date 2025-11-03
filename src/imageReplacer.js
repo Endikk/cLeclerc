@@ -46,5 +46,3 @@ class ImageReplacer {
         images.forEach(img => this.replace(img));
     }
 }
-
-export default ImageReplacer;

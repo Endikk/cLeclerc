@@ -1,8 +1,3 @@
-import { CHECK_INTERVAL } from './config.js';
-import ImageManager from './imageManager.js';
-import ImageReplacer from './imageReplacer.js';
-import DOMObserver from './domObserver.js';
-
 class CLeclerc {
     constructor() {
         this.imageManager = new ImageManager();

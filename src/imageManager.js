@@ -1,5 +1,3 @@
-import { LECLERC_IMAGES } from './config.js';
-
 class ImageManager {
     constructor() {
         this.leclercImageUrls = [];
@@ -20,5 +18,3 @@ class ImageManager {
         return this.leclercImageUrls.includes(src);
     }
 }
-
-export default ImageManager;

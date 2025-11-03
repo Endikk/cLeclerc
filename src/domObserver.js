@@ -43,5 +43,3 @@ class DOMObserver {
         }
     }
 }
-
-export default DOMObserver;
