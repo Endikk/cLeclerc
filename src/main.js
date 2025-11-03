@@ -12,7 +12,7 @@ class CLeclerc {
     }
 }
 
-// Initialize when DOM is ready
+// Initialize extension when DOM is ready
 if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', () => {
         const app = new CLeclerc();

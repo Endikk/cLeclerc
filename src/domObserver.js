@@ -13,7 +13,7 @@ class DOMObserver {
             childList: true,
             subtree: true,
             attributes: true,
-            attributeFilter: ['src']
+            attributeFilter: ['src', 'style', 'class']
         });
     }
 
@@ -27,13 +27,32 @@ class DOMObserver {
                     const images = node.querySelectorAll('img');
                     images.forEach(img => this.imageReplacer.replace(img));
                 }
+                // Check for newly added iframes
+                if (node.tagName === 'IFRAME') {
+                    setTimeout(() => this.imageReplacer.replaceInIframes(), 100);
+                }
             }
         });
 
-        if (mutation.type === 'attributes' &&
-            mutation.target.tagName === 'IMG' &&
-            mutation.attributeName === 'src') {
-            this.imageReplacer.replace(mutation.target);
+        if (mutation.type === 'attributes') {
+            const target = mutation.target;
+
+            // Replace if it's an img tag and src changed
+            if (target.tagName === 'IMG' && mutation.attributeName === 'src') {
+                this.imageReplacer.replace(target);
+            }
+
+            // Check if style changed and contains a background-image
+            if (mutation.attributeName === 'style' || mutation.attributeName === 'class') {
+                const style = window.getComputedStyle(target);
+                const bgImage = style.backgroundImage;
+                if (bgImage && bgImage !== 'none' && !bgImage.includes('chrome-extension://')) {
+                    if (!target.dataset.leclercBg) {
+                        target.style.backgroundImage = `url('${this.imageReplacer.imageManager.getRandomImage()}')`;
+                        target.dataset.leclercBg = 'true';
+                    }
+                }
+            }
         }
     }
 

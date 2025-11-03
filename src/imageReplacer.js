@@ -9,12 +9,15 @@ class ImageReplacer {
             return;
         }
 
-        const height = img.height;
-        const width = img.width;
+        // Force replacement even if dimensions are 0
+        const computedStyle = window.getComputedStyle(img);
+        const height = img.height || parseInt(computedStyle.height) || 0;
+        const width = img.width || parseInt(computedStyle.width) || 0;
 
         if (height > 0 && width > 0) {
             this.applyReplacement(img, width, height);
         } else {
+            this.applyReplacement(img, Math.max(width, 200), Math.max(height, 200));
             this.replaceWhenLoaded(img);
         }
     }
@@ -42,7 +45,45 @@ class ImageReplacer {
     }
 
     replaceAll() {
+        // Replace all <img> tags
         const images = document.querySelectorAll('img');
         images.forEach(img => this.replace(img));
+
+        // Replace CSS background-images
+        this.replaceBackgroundImages();
+
+        // Replace images in iframes
+        this.replaceInIframes();
+    }
+
+    replaceBackgroundImages() {
+        const allElements = document.querySelectorAll('*');
+        allElements.forEach(element => {
+            const style = window.getComputedStyle(element);
+            const bgImage = style.backgroundImage;
+
+            if (bgImage && bgImage !== 'none' && !bgImage.includes('chrome-extension://')) {
+                if (!element.dataset.leclercBg) {
+                    element.style.backgroundImage = `url('${this.imageManager.getRandomImage()}')`;
+                    element.dataset.leclercBg = 'true';
+                }
+            }
+        });
+    }
+
+    replaceInIframes() {
+        const iframes = document.querySelectorAll('iframe');
+        iframes.forEach(iframe => {
+            try {
+                const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+                if (iframeDoc) {
+                    const images = iframeDoc.querySelectorAll('img');
+                    images.forEach(img => this.replace(img));
+                }
+            } catch (e) {
+                // Ignore cross-origin security errors
+                console.log('Cannot access iframe due to cross-origin restrictions');
+            }
+        });
     }
 }
