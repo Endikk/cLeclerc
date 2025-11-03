@@ -1,60 +1,102 @@
 # cLeclerc
 
-A Chrome extension that replaces all images on web pages with pictures of Formula 1 driver Charles Leclerc.
+> Transform your browsing experience with Charles Leclerc everywhere
+
+A Chrome extension that replaces all images on websites with photos of Formula 1 driver Charles Leclerc.
 
 ![Charles Leclerc](https://64.media.tumblr.com/d4a8b82f49955fd1feb58222940c5c24/06d44c13837e3919-74/s1280x1920/7f074abec03f2b56692600e97cb48ac47dc328e7.jpg)
 
-## Overview
-
-cLeclerc is a fun, lightweight Chrome extension that transforms your browsing experience by replacing all images on websites with random pictures of Charles Leclerc, Ferrari's Formula 1 star driver.
-
 ## Features
 
-- Replaces all images on any website with Charles Leclerc photos
 - Works on all websites automatically
-- Lightweight and doesn't slow down your browsing
-- Easy to enable/disable with one click
+- Lightweight and fast - vanilla JavaScript, no dependencies
+- Smart detection of dynamically loaded images
+- MutationObserver API for optimal performance
+- Manifest V3 compatible
 
 ## Installation
 
-Since this extension is not yet published on the Chrome Web Store, you can install it manually:
+1. Clone this repository
+   ```bash
+   git clone https://github.com/yourusername/cLeclerc.git
+   ```
 
-1. Download or clone this repository
-2. Open Chrome and navigate to `chrome://extensions/`
-3. Enable "Developer mode" by toggling the switch in the top-right corner
-4. Click "Load unpacked" and select the directory containing the extension files
-5. The extension should now be installed and active
+2. Open Chrome and go to `chrome://extensions/`
 
-## Image Setup
+3. Enable **Developer mode** (top-right corner)
 
-1. Create a folder structure `images/all` in the extension directory
-2. Place your Charles Leclerc images in the `images/all` folder
-3. Create icon images for the extension and place them in the `images` folder:
-   - icon16.png (16x16 pixels)
-   - icon48.png (48x48 pixels)
-   - icon128.png (128x128 pixels)
+4. Click **Load unpacked** and select the project folder
+
+5. Done! Start browsing and watch the magic happen.
 
 ## Usage
 
-- After installation, the extension will automatically replace images as you browse
-- Click on the extension icon in your browser toolbar to enable or disable the extension
-- Refresh any page to see the changes take effect
+Once installed, the extension automatically replaces images as you browse.
 
-## Roadmap
+To disable temporarily, right-click the extension icon and toggle it off.
 
-- [ ] Publish to Chrome Web Store
-- [ ] Add customization options
-- [ ] Support for other browsers (Firefox, Edge)
+## Tech Stack
+
+- JavaScript ES6+ Modules
+- Chrome Extension Manifest V3
+- MutationObserver API
+- ESLint for code quality
+
+## Project Structure
+
+```
+cLeclerc/
+├── src/
+│   ├── main.js           # Entry point
+│   ├── config.js         # Configuration
+│   ├── imageManager.js   # Image URL management
+│   ├── imageReplacer.js  # Image replacement logic
+│   └── domObserver.js    # DOM mutation observer
+├── images/
+│   ├── all/             # Charles Leclerc photos (23 images)
+│   └── profil/          # Extension icons
+├── manifest.json        # Extension config
+├── package.json         # NPM dependencies
+├── .eslintrc.json       # ESLint configuration
+└── README.md
+```
+
+## Development
+
+### Prerequisites
+
+- Node.js and npm
+- Google Chrome or Chromium
+
+### Setup
+
+1. Install dependencies
+   ```bash
+   npm install
+   ```
+
+2. Lint the code
+   ```bash
+   npm run lint
+   ```
+
+3. Auto-fix linting issues
+   ```bash
+   npm run lint:fix
+   ```
 
 ## Contributing
 
-Contributions are welcome! Feel free to submit a Pull Request.
+Contributions are welcome! Check out [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+MIT License - see [LICENSE](LICENSE) for details.
 
-## Acknowledgments
+## Disclaimer
 
-- All Charles Leclerc images are property of their respective owners
-- Special thanks to Scuderia Ferrari and Formula 1
+All photos of Charles Leclerc are property of their respective owners. This is an unofficial fan project and is not affiliated with Charles Leclerc, Scuderia Ferrari, or Formula 1.
+
+---
+
+**Forza Ferrari!**

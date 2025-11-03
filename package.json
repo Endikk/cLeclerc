@@ -1,0 +1,21 @@
+{
+  "name": "cleclerc",
+  "version": "1.0.3",
+  "description": "Chrome extension that replaces all images with Charles Leclerc photos",
+  "type": "module",
+  "scripts": {
+    "lint": "eslint src/**/*.js",
+    "lint:fix": "eslint src/**/*.js --fix"
+  },
+  "keywords": [
+    "chrome-extension",
+    "charles-leclerc",
+    "f1",
+    "ferrari"
+  ],
+  "author": "cLeclerc Contributors",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^8.57.0"
+  }
+}
